@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="light--theme html" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="app/style/style.css" />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <script defer src="app/js/script.js"></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header class="header--light"></header>
+    <main>
+      <div class="top--items">
+        <h1 class="todo top--item">TODO</h1>
+
+        <div class="top--item">
+          <img class="icon icon--toggle" src="/images/icon-moon.svg" alt="" />
+        </div>
+      </div>
+
+      <section class="task--section">
+        <!-- task adding section -->
+        <div class="add--task background__light">
+          <span class="pad--left"
+            ><span class="radio radio--button__light"></span
+          ></span>
+          <input
+            class="task--input task--input__light"
+            type="text"
+            placeholder="Create a new todo..."
+          />
+        </div>
+
+        <!-- task list section -->
+        <div class="task--container background__light">
+          <ul class="task--list">
+            <li class="task--item task--item__light" draggable="true">
+              <span class="pad--left"
+                ><span class="radio--button radio--button__light"
+                  ><img
+                    class="check"
+                    src="/images/icon-check.svg"
+                    alt="check" /></span
+              ></span>
+              <span class="task--text">Jog around the park 3x</span>
+              <span class="icon icon--delete"
+                ><img
+                  src="/images/icon-cross.svg"
+                  alt="delete task"
+                  data-src="frontendmentor"
+              /></span>
+            </li>
+            <li class="task--item task--item__light" draggable="true">
+              <span class="pad--left"
+                ><span class="radio--button radio--button__light"
+                  ><img
+                    class="check"
+                    src="/images/icon-check.svg"
+                    alt="check" /></span
+              ></span>
+              <span class="task--text">10 minutes meditation</span
+              ><span class="icon icon--delete"
+                ><img
+                  src="/images/icon-cross.svg"
+                  alt="delete task"
+                  data-src="frontendmentor"
+                />
+              </span>
+            </li>
+          </ul>
+          <div class="task--bottom task--bottom__light">
+            <span class="task--bottom__item items--left"
+              ><span class="number--items__left">5</span> items left</span
+            >
+            <div class="desktop--bottom__items">
+              <span
+                class="task--bottom__item desktop--bottom__item task--group__active"
+                id="all--task__destop"
+                >All</span
+              >
+              <span
+                class="task--bottom__item desktop--bottom__item"
+                id="active--task__desktop"
+                >Active</span
+              >
+              <span
+                class="task--bottom__item desktop--bottom__item"
+                id="completed--task__desktop"
+                >Completed</span
+              >
+            </div>
+
+            <span class="task--bottom__item completed">Clear Completed</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="task--groups background__light">
+        <div>
+          <span
+            class="task--group task--group__light task--group__active"
+            id="all--taskes"
+            data-id="all--taskes"
+            >All</span
+          >
+          <span
+            class="task--group task--group__light"
+            id="active--task"
+            data-id="active--task"
+            >Active</span
+          >
+          <span
+            class="task--group task--group__light"
+            id="completed--task"
+            data-id="completed--task"
+            >Completed</span
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="info info--light">Drag and drop to reorder list</p>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">CollinsTYK</a>.
+      </div>
+    </footer>
+  </body>
+</html>
